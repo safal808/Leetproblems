@@ -4,14 +4,12 @@ public class Solution {
         long rev=x;
         int sum = 0;
         
-        while (x != 0) {
-            int r = x % 10;
-            
+        while (x != 0) {            
             if (sum > int.MaxValue / 10 || sum < int.MinValue / 10) {
                 return 0;
             }
             
-            sum = sum * 10 + r;
+            sum = sum * 10 +  x % 10;;
             x = x / 10;
         } 
         return sum;
